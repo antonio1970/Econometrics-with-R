@@ -14,4 +14,10 @@ head(mtcars, 5)
 
 hist(mtcars$mpg, col ='green')
 
+# Compute correlation coefficient
+
 cor.test(mtcars$mpg, mtcars$disp)
+
+
+# Generate a boxplot for variable mpg
+boxplot(mtcars$mpg)
