@@ -1,0 +1,31 @@
+---
+title: "Introduction to ggplot with regression"
+author: "Antonio Rodriguez"
+date: "28 de enero de 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r load libraries}
+library(tidyverse)
+library(gapminder)
+library(ggplot2)
+library(ggthemes)
+```
+
+```{r scatter plot GDP vs. life Expectancy}
+gapminder %>% ggplot(aes(x = log(gdpPercap), y = lifeExp, col = continent)) +
+  geom_point()
+
+```
+
+
+```{r similar to the Economist}
+gapminder %>% ggplot(aes(x = log(gdpPercap), y = lifeExp)) +
+  geom_point() + geom_smooth(lwd = 1, se = TRUE, method = 'lm') + theme_economist() + ggtitle('GDP per capita vs. Life Expectancy')
+
+```
+
