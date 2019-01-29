@@ -20,6 +20,14 @@ gapminder %>%
   group_by(country) %>% 
 summarize(av.income = mean(gdpPercap))
 
+# Generate a box plot per continent (Life Expectancy variable)
+
+gapminder %>% 
+  ggplot(aes(x = factor(0), y = lifeExp)) + 
+  geom_boxplot(aes(color = continent)) +
+  facet_wrap(~continent)
+
+
 # Generate a scatter plot with life expectancy and gross domestic product per capita
 
 gapminder %>% ggplot(aes(x = log(gdpPercap), y = lifeExp, col = continent)) +
