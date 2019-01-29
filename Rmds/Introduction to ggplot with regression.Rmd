@@ -29,6 +29,14 @@ gapminder %>%
 summarize(av.income = mean(gdpPercap))
 ```
 
+```{r boxplot life expectancy}
+gapminder %>% 
+  ggplot(aes(x = factor(0), y = lifeExp)) + 
+  geom_boxplot(aes(color = continent)) +
+  facet_wrap(~continent)
+```
+
+
 
 
 ```{r scatter plot GDP vs. life Expectancy}

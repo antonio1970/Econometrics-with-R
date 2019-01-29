@@ -74,6 +74,15 @@ summarize(av.income = mean(gdpPercap))
     ## # ... with 132 more rows
 
 ``` r
+gapminder %>% 
+  ggplot(aes(x = factor(0), y = lifeExp)) + 
+  geom_boxplot(aes(color = continent)) +
+  facet_wrap(~continent)
+```
+
+![](Introduction_to_ggplot_with_regression_files/figure-markdown_github/boxplot%20life%20expectancy-1.png)
+
+``` r
 gapminder %>% ggplot(aes(x = log(gdpPercap), y = lifeExp, col = continent)) +
   geom_point()
 ```
