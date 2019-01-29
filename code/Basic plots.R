@@ -10,7 +10,7 @@ skim(murders)
 head (murders, 5)
 
 
-# Histogram of the murderer rate
+# Histogram of the murder rate
 murders = mutate (murders, rate = total/population* 100000)
 hist(murders$rate, col = 'green', main = 'Histogram of the murder rate')
 
