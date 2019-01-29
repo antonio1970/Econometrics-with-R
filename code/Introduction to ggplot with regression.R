@@ -6,6 +6,14 @@ library(ggplot2)
 library(gganimate)
 
 
+# Generate average life expectancy per country
+
+gapminder %>% 
+  group_by(country) %>% 
+  summarize(av.le = mean(lifeExp)) %>% 
+  arrange(desc(av.le))
+
+
 # Generate a scatter plot with life expectancy and gross domestic product per capita
 
 gapminder %>% ggplot(aes(x = log(gdpPercap), y = lifeExp, col = continent)) +
