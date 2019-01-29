@@ -31,6 +31,28 @@ library(ggthemes)
     ## Warning: package 'ggthemes' was built under R version 3.5.2
 
 ``` r
+gapminder %>% 
+  group_by(country) %>% 
+  summarize(av.le = mean(lifeExp)) %>% 
+  arrange(desc(av.le))
+```
+
+    ## # A tibble: 142 x 2
+    ##    country     av.le
+    ##    <fct>       <dbl>
+    ##  1 Iceland      76.5
+    ##  2 Sweden       76.2
+    ##  3 Norway       75.8
+    ##  4 Netherlands  75.6
+    ##  5 Switzerland  75.6
+    ##  6 Canada       74.9
+    ##  7 Japan        74.8
+    ##  8 Australia    74.7
+    ##  9 Denmark      74.4
+    ## 10 France       74.3
+    ## # ... with 132 more rows
+
+``` r
 gapminder %>% ggplot(aes(x = log(gdpPercap), y = lifeExp, col = continent)) +
   geom_point()
 ```

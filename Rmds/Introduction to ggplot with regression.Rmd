@@ -16,6 +16,14 @@ library(ggplot2)
 library(ggthemes)
 ```
 
+```{r average life expectancy}
+gapminder %>% 
+  group_by(country) %>% 
+  summarize(av.le = mean(lifeExp)) %>% 
+  arrange(desc(av.le))
+```
+
+
 ```{r scatter plot GDP vs. life Expectancy}
 gapminder %>% ggplot(aes(x = log(gdpPercap), y = lifeExp, col = continent)) +
   geom_point()
