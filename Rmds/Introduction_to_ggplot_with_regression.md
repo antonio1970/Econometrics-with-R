@@ -53,6 +53,27 @@ gapminder %>%
     ## # ... with 132 more rows
 
 ``` r
+gapminder %>% 
+  group_by(country) %>% 
+summarize(av.income = mean(gdpPercap))
+```
+
+    ## # A tibble: 142 x 2
+    ##    country     av.income
+    ##    <fct>           <dbl>
+    ##  1 Afghanistan      803.
+    ##  2 Albania         3255.
+    ##  3 Algeria         4426.
+    ##  4 Angola          3607.
+    ##  5 Argentina       8956.
+    ##  6 Australia      19981.
+    ##  7 Austria        20412.
+    ##  8 Bahrain        18078.
+    ##  9 Bangladesh       818.
+    ## 10 Belgium        19901.
+    ## # ... with 132 more rows
+
+``` r
 gapminder %>% ggplot(aes(x = log(gdpPercap), y = lifeExp, col = continent)) +
   geom_point()
 ```

@@ -23,6 +23,13 @@ gapminder %>%
   arrange(desc(av.le))
 ```
 
+```{r average per capita GDP}
+gapminder %>% 
+  group_by(country) %>% 
+summarize(av.income = mean(gdpPercap))
+```
+
+
 
 ```{r scatter plot GDP vs. life Expectancy}
 gapminder %>% ggplot(aes(x = log(gdpPercap), y = lifeExp, col = continent)) +
