@@ -1,12 +1,27 @@
-# Load the population data from the World Bank
+---
+title: "World Bank Indicators: the wbstats package"
+output: github_document
+---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
 library(wbstats)
+library(tidyverse)
+```
 
+```{r}
 # Some indicators, population, Trade (%GDP)
 panel_data<- wb(indicator = c("SP.POP.TOTL", "SP.POP.GROW", "NE.TRD.GNFS.ZS"), startdate = 1960, enddate = 2017, return_wide = TRUE)
-head(panel_data)
+head(panel_data,5)
+```
 
+```{r}
 #Rearrange panel in wide format (variables per column)
-
 panel <-panel_data %>% 
-  arrange(country, date)
+  arrange(country, date) %>% 
+  head()
+```
+
