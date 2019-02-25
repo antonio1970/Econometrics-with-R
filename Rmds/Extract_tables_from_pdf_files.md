@@ -184,8 +184,8 @@ table[[1]]
     ## [76,] "Haiti"                  "140"  "n/a"  ""     "0"
 
 ``` r
-tablaKEI <- data.frame(cbind(table[[1]][-c(1:6),1:3]))  # Select all rows but only the column with the KEI
-names(tablaKEI)= c("Country", "Rank2007", "KEI2007")
+tablaKEI <- data.frame(cbind(table[[1]][-c(1:6), c(1:3, 6:8)]))  # Select all rows but only the column with the KEI
+names(tablaKEI)= c("Country", "Rank2007", "KEI2007", "Country", "Rank2007", "KEI2007")
 ```
 
 ``` r
@@ -193,75 +193,75 @@ tablaKEI %>%
   knitr::kable(caption = "Table 1, Ranking and Knowledge Economy Index, 2007")
 ```
 
-| Country               | Rank2007 | KEI2007 |
-|:----------------------|:---------|:--------|
-| Sweden                | 1        | 9.26    |
-| Denmark               | 2        | 9.22    |
-| Norway                | 3        | 9.17    |
-| Finland               | 4        | 9.07    |
-| Netherlands           | 5        | 9.02    |
-| Switzerland           | 6        | 8.99    |
-| Canada                | 7        | 8.94    |
-| Australia             | 8        | 8.88    |
-| United Kingdom        | 9        | 8.8     |
-| United States         | 10       | 8.8     |
-| New Zealand           | 11       | 8.76    |
-| Iceland               | 12       | 8.71    |
-| Austria               | 13       | 8.58    |
-| Ireland               | 14       | 8.56    |
-| Germany               | 15       | 8.54    |
-| Belgium               | 16       | 8.46    |
-| Japan                 | 17       | 8.46    |
-| Luxembourg            | 18       | 8.39    |
-| Taiwan, China         | 19       | 8.37    |
-| France                | 20       | 8.36    |
-| Hong Kong, China      | 21       | 8.19    |
-| Israel                | 22       | 8.16    |
-| Slovenia              | 23       | 8.16    |
-| Spain                 | 24       | 8.09    |
-| Estonia               | 25       | 8.07    |
-| Italy                 | 26       | 7.98    |
-| Korea, Rep.           | 27       | 7.74    |
-| Hungary               | 28       | 7.64    |
-| Czech Republic        | 29       | 7.64    |
-| Cyprus                | 30       | 7.63    |
-| Lithuania             | 31       | 7.49    |
-| Portugal              | 32       | 7.44    |
-| Latvia                | 33       | 7.37    |
-| Greece                | 34       | 7.29    |
-| Poland                | 35       | 7.24    |
-| Slovak Republic       | 36       | 7.22    |
-| Barbados              | 37       | 7.17    |
-| Croatia               | 38       | 7.09    |
-| Chile                 | 39       | 6.74    |
-| Malaysia              | 40       | 6.23    |
-| Bulgaria              | 41       | 6.18    |
-| Qatar                 | 42       | 6.17    |
-| Uruguay               | 43       | 6.11    |
-| Dominica              | 44       | 6.06    |
-| Costa Rica            | 45       | 6.02    |
-| Kuwait                | 46       | 6.01    |
-| Russian Federation    | 47       | 5.94    |
-| Romania               | 48       | 5.86    |
-| United Arab Emirates  | 49       | 5.78    |
-| South Africa          | 50       | 5.64    |
-| Ukraine               | 51       | 5.58    |
-| Bahrain               | 52       | 5.58    |
-| Turkey                | 53       | 5.56    |
-| Brazil                | 54       | 5.5     |
-| Argentina             | 55       | 5.49    |
-| Thailand              | 56       | 5.41    |
-| Armenia               | 57       | 5.36    |
-| Macedonia, FYR        | 58       | 5.36    |
-| Mexico                | 59       | 5.35    |
-| Trinidad and Tobago   | 60       | 5.33    |
-| Belarus               | 61       | 5.33    |
-| Jordan                | 62       | 5.19    |
-| Oman                  | 63       | 5.12    |
-| Mauritius             | 64       | 5.08    |
-| Jamaica               | 65       | 5.04    |
-| Lebanon               | 66       | 5.03    |
-| Panama                | 67       | 4.98    |
-| Serbia and Montenegro | 68       | 4.98    |
-| Saudi Arabia          | 69       | 4.76    |
-| Moldova               | 70       | 4.64    |
+| Country               | Rank2007 | KEI2007 | Country                | Rank2007 | KEI2007 |
+|:----------------------|:---------|:--------|:-----------------------|:---------|:--------|
+| Sweden                | 1        | 9.26    | Tunisia                | 71       | 4.52    |
+| Denmark               | 2        | 9.22    | Kazakhstan             | 72       | 4.5     |
+| Norway                | 3        | 9.17    | Philippines            | 73       | 4.48    |
+| Finland               | 4        | 9.07    | Peru                   | 74       | 4.43    |
+| Netherlands           | 5        | 9.02    | China                  | 75       | 4.42    |
+| Switzerland           | 6        | 8.99    | Georgia                | 76       | 4.4     |
+| Canada                | 7        | 8.94    | Colombia               | 77       | 4.32    |
+| Australia             | 8        | 8.88    | Venezuela, RB          | 78       | 4.26    |
+| United Kingdom        | 9        | 8.8     | Mongolia               | 79       | 4.23    |
+| United States         | 10       | 8.8     | Guyana                 | 80       | 4.21    |
+| New Zealand           | 11       | 8.76    | Sri Lanka              | 81       | 4.03    |
+| Iceland               | 12       | 8.71    | Namibia                | 82       | 3.94    |
+| Austria               | 13       | 8.58    | Egypt, Arab Rep.       | 83       | 3.93    |
+| Ireland               | 14       | 8.56    | Botswana               | 84       | 3.92    |
+| Germany               | 15       | 8.54    | El Salvador            | 85       | 3.88    |
+| Belgium               | 16       | 8.46    | Bolivia                | 86       | 3.78    |
+| Japan                 | 17       | 8.46    | Kyrgyz Rep.            | 87       | 3.63    |
+| Luxembourg            | 18       | 8.39    | Dominican Republic     | 88       | 3.62    |
+| Taiwan, China         | 19       | 8.37    | Azerbaijan             | 89       | 3.56    |
+| France                | 20       | 8.36    | Morocco                | 90       | 3.3     |
+| Hong Kong, China      | 21       | 8.19    | Indonesia              | 91       | 3.29    |
+| Israel                | 22       | 8.16    | Uzbekistan             | 92       | 3.27    |
+| Slovenia              | 23       | 8.16    | Ecuador                | 93       | 3.26    |
+| Spain                 | 24       | 8.09    | Albania                | 94       | 3.22    |
+| Estonia               | 25       | 8.07    | Paraguay               | 95       | 3.19    |
+| Italy                 | 26       | 7.98    | Honduras               | 96       | 3.15    |
+| Korea, Rep.           | 27       | 7.74    | Vietnam                | 97       | 3.1     |
+| Hungary               | 28       | 7.64    | Iran, Islamic Rep.     | 98       | 3.09    |
+| Czech Republic        | 29       | 7.64    | Algeria                | 99       | 3.07    |
+| Cyprus                | 30       | 7.63    | Nicaragua              | 100      | 3.01    |
+| Lithuania             | 31       | 7.49    | India                  | 101      | 3       |
+| Portugal              | 32       | 7.44    | Cape Verde             | 102      | 2.88    |
+| Latvia                | 33       | 7.37    | Guatemala              | 103      | 2.83    |
+| Greece                | 34       | 7.29    | Syrian Arab Republic   | 104      | 2.82    |
+| Poland                | 35       | 7.24    | Swaziland              | 105      | 2.77    |
+| Slovak Republic       | 36       | 7.22    | Kenya                  | 106      | 2.73    |
+| Barbados              | 37       | 7.17    | Zimbabwe               | 107      | 2.48    |
+| Croatia               | 38       | 7.09    | Tajikistan             | 108      | 2.42    |
+| Chile                 | 39       | 6.74    | Senegal                | 109      | 2.38    |
+| Malaysia              | 40       | 6.23    | Madagascar             | 110      | 2.37    |
+| Bulgaria              | 41       | 6.18    | Lesotho                | 111      | 2.23    |
+| Qatar                 | 42       | 6.17    | Uganda                 | 112      | 2.05    |
+| Uruguay               | 43       | 6.11    | Ghana                  | 113      | 1.99    |
+| Dominica              | 44       | 6.06    | Pakistan               | 114      | 1.89    |
+| Costa Rica            | 45       | 6.02    | Nigeria                | 115      | 1.84    |
+| Kuwait                | 46       | 6.01    | Tanzania               | 116      | 1.7     |
+| Russian Federation    | 47       | 5.94    | Mauritania             | 117      | 1.67    |
+| Romania               | 48       | 5.86    | Benin                  | 118      | 1.62    |
+| United Arab Emirates  | 49       | 5.78    | Yemen, Rep.            | 119      | 1.62    |
+| South Africa          | 50       | 5.64    | Cote D'Ivoire          | 120      | 1.54    |
+| Ukraine               | 51       | 5.58    | Angola                 | 121      | 1.49    |
+| Bahrain               | 52       | 5.58    | Zambia                 | 122      | 1.47    |
+| Turkey                | 53       | 5.56    | Cameroon               | 123      | 1.46    |
+| Brazil                | 54       | 5.5     | Sudan                  | 124      | 1.39    |
+| Argentina             | 55       | 5.49    | Myanmar                | 125      | 1.35    |
+| Thailand              | 56       | 5.41    | Malawi                 | 126      | 1.25    |
+| Armenia               | 57       | 5.36    | Mali                   | 127      | 1.22    |
+| Macedonia, FYR        | 58       | 5.36    | Mozambique             | 128      | 1.18    |
+| Mexico                | 59       | 5.35    | Lao PDR                | 129      | 1.17    |
+| Trinidad and Tobago   | 60       | 5.33    | Bangladesh             | 130      | 1.14    |
+| Belarus               | 61       | 5.33    | Nepal                  | 131      | 1.13    |
+| Jordan                | 62       | 5.19    | Burkina Faso           | 132      | 1.08    |
+| Oman                  | 63       | 5.12    | Eritrea                | 133      | 0.93    |
+| Mauritius             | 64       | 5.08    | Rwanda                 | 134      | 0.84    |
+| Jamaica               | 65       | 5.04    | Djibouti               | 135      | 0.79    |
+| Lebanon               | 66       | 5.03    | Ethiopia               | 136      | 0.74    |
+| Panama                | 67       | 4.98    | Sierra Leone           | 137      | 0.62    |
+| Serbia and Montenegro | 68       | 4.98    | Singapore              | 138      | n/a     |
+| Saudi Arabia          | 69       | 4.76    | Bosnia and Herzegovina | 139      | n/a     |
+| Moldova               | 70       | 4.64    | Haiti                  | 140      | n/a     |
