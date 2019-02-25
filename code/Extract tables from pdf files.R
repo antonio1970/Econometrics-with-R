@@ -1,13 +1,12 @@
-# Extracting pdf tables using tabulizer package
-
 # Preliminaries, install the packages
+
 install.packages('tabulizer')
 install.packages('tabulizerjars')
 install.packages("rJava")
 
 
 ## Check R version (32-64 bits)
-version()  # Check version of R
+version  # Check version of R
 Sys.setenv(JAVA_HOME="C:/Program Files/Java/jdk-11.0.2/")  # Set up the correct path for Java, and modify the path accordingly
 
 ##load the packages
@@ -15,6 +14,8 @@ Sys.setenv(JAVA_HOME="C:/Program Files/Java/jdk-11.0.2/")  # Set up the correct 
 library(rJava)
 library(tabulizer)
 library(tabulizerjars)
+library(tidyverse)
+library(xlsx)
 
 # Use the command extract_tables from the tabulizer package
 
