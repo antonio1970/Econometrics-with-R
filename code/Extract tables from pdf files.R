@@ -25,7 +25,7 @@ table[[1]] # Select the first element of the list where we find what we want to 
 
 # Use as dataframe, and remove the unnecesary rows, and select the 3 columns
 
-tablaKEI <- data.frame(cbind(table[[1]][-c(1:6), c(1:3, 6:18)]))  # Select all rows but only the column with the KEI
+tablaKEI <- data.frame(cbind(table[[1]][-c(1:6), c(1:3, 6:8)]))  # Select all rows but only the column with the KEI
 names(tablaKEI)= c("Country", "Rank2007", "KEI2007", "Country", "Rank2007", "KEI2007")
 
 # Put it in a nice way with kabble
