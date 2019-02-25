@@ -9,4 +9,7 @@ head(panel_data)
 #Rearrange panel in wide format (variables per column)
 
 panel <-panel_data %>% 
-  arrange(country, date)
+  arrange(country, date) 
+
+  
+head(panel, 5)
