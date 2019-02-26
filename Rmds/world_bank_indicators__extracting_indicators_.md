@@ -29,20 +29,3 @@ head(panel_data,5)
     ## 3   ABW 1962    AW   Aruba             NA   1.4096219       56225
     ## 4   ABW 1963    AW   Aruba             NA   0.8324526       56695
     ## 5   ABW 1964    AW   Aruba             NA   0.5926490       57032
-
-``` r
-#Rearrange panel in wide format (variables per column)
-panel <-panel_data %>% 
-  arrange(country, date) 
-```
-
-``` r
-head(panel, 5)
-```
-
-    ##   iso3c date iso2c     country NE.TRD.GNFS.ZS SP.POP.GROW SP.POP.TOTL
-    ## 1   AFG 1960    AF Afghanistan       11.15703    1.816077     8996351
-    ## 2   AFG 1961    AF Afghanistan       12.55061    1.876528     9166764
-    ## 3   AFG 1962    AF Afghanistan       14.22764    1.934999     9345868
-    ## 4   AFG 1963    AF Afghanistan       26.03551    1.992521     9533954
-    ## 5   AFG 1964    AF Afghanistan       26.94445    2.049423     9731361
