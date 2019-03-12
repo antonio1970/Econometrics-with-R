@@ -28,10 +28,17 @@ table[[4]]  <- table[[4]][,-c(5:6)]
 # Generate dataframe with the list
 
 tableARCO <- data.frame(rbind(table[[1]], table[[2]], table[[3]], table[[4]]))
-names(tableARCO)= c("Ranking", "Country", "ArCO20007", "ArCO1990")
+names(tableARCO)= c("Ranking", "Country", "ArCO2000", "ArCO1990")
 
 tableARCO[-c(1:2),]
 # Put it in a nice way with kabble
 
 tableARCO %>%
   knitr::kable(caption = "Table 1, ArCO 1900-2000. World Development, 2004")
+
+
+# Export it as an Excel file
+
+library(xlsx)
+write.xlsx(tableARCO, file="ArCO.xlsx", 
+           sheetName="ArCO Indicator")
